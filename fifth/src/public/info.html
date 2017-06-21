@@ -1,0 +1,28 @@
+<div class="container">
+<div ng-if="!ctrl.notreg">
+<h3>First Name:</h3> {{ctrl.fname}}</br>
+<h3>Last Name:</h3> {{ctrl.lname}}</br>
+<h3>Email:</h3> {{ctrl.email}}</br>
+<h3>Phone Number:</h3> {{ctrl.number}}</br>
+<h3>Favorite Item:</h3>
+<div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div>{{ctrl.sname}}</div>
+        <img class="img-responsive" width="250" height="150" ng-src="{{ctrl.basePath}}/images/{{ctrl.sname}}.jpg" alt="{{ctrl.title}}">
+      </div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title">{{ctrl.title}}</h3>
+      <p class="menu-item-details">{{ctrl.description}}</p>
+    </div>
+  </div>
+  <hr class="visible-xs">
+</div>
+
+</div>
+<div ng-if="ctrl.notreg">
+Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+</div>
+</div>
